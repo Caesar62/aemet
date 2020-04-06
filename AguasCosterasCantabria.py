@@ -35,14 +35,9 @@ response = requests.get(api_response.datos)
 #response.content
 aguas_costeras = response.content.decode(encoding="windows-1252")
 
-
-
 #aguas_costeras
 
-
 boletin_costero = json.loads(aguas_costeras)[0]
-
-
 
 prediccion_cantabrico="""
 BOLETÍN METEOROLÓGICO PARA AGUAS COSTERAS
@@ -56,7 +51,6 @@ FIN    :{}
     boletin_costero["prediccion"]["zona"][1]["subzona"]["nombre"].upper(),
     boletin_costero["prediccion"]["zona"][1]["subzona"]["texto"].upper()
 )
-
 
 print(prediccion_cantabrico)
 
