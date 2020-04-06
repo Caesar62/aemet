@@ -27,7 +27,7 @@ costa = '41' # str |  | Código | Área Costera | |----------|----------| | 42 |
 try:
     # Predicción marítima de alta mar.
     api_response = api_instance.prediccin_martima_de_alta_mar_(area)
-    pprint(api_response)
+    print("")
     
 except ApiException as e:
     print("Exception when calling PrediccionMaritimaApi->prediccin_martima_de_alta_mar_: %s\n" % e)
@@ -50,14 +50,10 @@ FIN    :{}
     boletin["prediccion"]["zona"][8]["texto"]
           )
 
-
-
-
-
 try:
     # Predicción marítima costera.
     api_response = api_instance.prediccin_martima_costera_(costa)
-    pprint(api_response)
+    print("")
 except ApiException as e:
     print("Exception when calling PrediccionMaritimaApi->prediccin_martima_costera_: %s\n" % e)
 
