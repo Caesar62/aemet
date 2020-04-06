@@ -11,7 +11,7 @@ import json
 
 # Prueba para Git
 
-api_key = ""
+api_key = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjZXNhaW56bEBnbWFpbC5jb20iLCJqdGkiOiIyYjFiNjkxYS1iOTk4LTRiNzgtOTYwMS1lMGViMTcwNjEwYWUiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTU4NjEyMjM1MiwidXNlcklkIjoiMmIxYjY5MWEtYjk5OC00Yjc4LTk2MDEtZTBlYjE3MDYxMGFlIiwicm9sZSI6IiJ9.fb-wFsTLg-EthXoOjSwJ32o0WlcGTpZEJE5rYyHLf9U"
 # Configure API key authorization: api_key
 configuration = swagger_client.Configuration()
 configuration.api_key['api_key'] = api_key
