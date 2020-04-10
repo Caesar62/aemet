@@ -34,8 +34,10 @@ except ApiException as e:
 
 response = requests.get(api_response.datos)  
 #response.content
-alta_mar = response.content.decode(encoding="windows-1252")
+
 boletin = json.loads(alta_mar)[0]
+
+# prueba
 
 prediccion_cantabrico = """
 BOLETÍN METEOROLÓGICO PARA ALTA MAR
