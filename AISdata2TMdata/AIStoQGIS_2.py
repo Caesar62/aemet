@@ -19,6 +19,7 @@ mycsv1 = os.path.split(mycsv)
 mycsv2 = mycsv1[0]
 mycsv3 = mycsv1[1]
 
+
 df = pd.read_csv(mycsv,sep=";",decimal=",",encoding="windows-1252",parse_dates=["Timestamp"])
 #print(df)
 mycsv4 = df.to_csv("D:/GitHub Project/AEMET/AISdata2TMdata/"'TIME_MANAGER_'+ mycsv3)
