@@ -11,7 +11,7 @@ mycsv = eg.fileopenbox(msg="Abrir archivo",
                          title="Control: fileopenbox",
                          default='*.csv',
                          filetypes=extension)
-print(mycsv)
+#print(mycsv)
 #eg.msgbox(mycsv, "fileopenbox", ok_button="Continuar")
 
 mycsv1 = os.path.split(mycsv)
