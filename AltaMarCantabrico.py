@@ -22,7 +22,7 @@ area = '1' # str |  | Código | Área de Alta Mar | |----------|----------| | 0 
 try:
     # Predicción marítima de alta mar.
     api_response = api_instance.prediccin_martima_de_alta_mar_(area)
-    pprint(api_response)
+    #pprint(api_response)
     
 except ApiException as e:
     print("Exception when calling PrediccionMaritimaApi->prediccin_martima_de_alta_mar_: %s\n" % e)
@@ -31,10 +31,13 @@ except ApiException as e:
 response = requests.get(api_response.datos)  
 #response.content
 alta_mar = response.content.decode(encoding="windows-1252")
+#print(alta_mar)
+
 boletin = json.loads(alta_mar)[0]
+#print(boletin)
 
 
-""" 
+''' 
 pprint(alta_mar)
 boletin.keys()
 boletin["situacion"].keys()
@@ -43,16 +46,18 @@ boletin["situacion"]["fin"]
 boletin["situacion"]["texto"]
 boletin["prediccion"].keys()
 boletin["prediccion"]["zona"][8]
- """
+''' 
 
 
 prediccion_cantabrico = """
 BOLETÍN METEOROLÓGICO PARA ALTA MAR
+PRODUCTOR: {}
 INICIO :{}
 FIN    :{}
 {}
 {}
 """.format(
+    boletin["origen"]["productor"],
     boletin["situacion"]["inicio"],
     boletin["situacion"]["fin"],
     boletin["prediccion"]["zona"][8]["nombre"],
